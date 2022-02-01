@@ -6,7 +6,7 @@ const proximo = document.querySelector('#next')
 
 play.onclick = comecar
 pause.onclick = pausar
-let cont = 0
+let indexMusica = 0
 
 const musicas = [{
     titulo: "Hollywood's Bleeding",
@@ -23,17 +23,16 @@ const musicas = [{
     artista: 'Linkin Park',
     capa: 'img/meteora.jpg',
     audio: 'audio/somewhere_i_belong.mp3'
+}, {
+    titulo: 'Harvester Of Sorrow',
+    artista: 'Metallica',
+    capa: 'img/and_justice_for_all.webp',
+    audio: 'audio/harvester_of_sorrow.mp3'
 }]
 
 function getMusica() {
-    if (cont != musicas.length - 1) {
-        cont += 1
-        return cont
-    }
-    else {
-        cont = 0
-        return cont
-    }
+    indexMusica == musicas.length - 1 ? indexMusica = 0 : indexMusica++
+    return indexMusica
 }
 
 function passarMusica(obj) {
@@ -58,12 +57,12 @@ function pausar() {
 function voltar() {
     if(music.currentTime > 1.5){
         music.currentTime = 0
-    } else if (cont == 0){
-        cont = musicas.length - 1
-        passarMusica(musicas[cont])
+    } else if (indexMusica == 0){
+        indexMusica = musicas.length - 1
+        passarMusica(musicas[indexMusica])
     } else {
-        cont -= 1
-        passarMusica(musicas[cont])
+        indexMusica -= 1
+        passarMusica(musicas[indexMusica])
     }
 }
 
