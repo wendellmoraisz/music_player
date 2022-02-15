@@ -85,3 +85,44 @@ body {
 .playlist h2 {
     text-align: center;
 }
+
+.selected {
+    border: 1px solid #20ff03;
+}
+
+@media (max-width: 1300px) {
+    .player {
+        left: 10%;
+    }
+    .playlist {
+        left: 50%;
+    }
+}
+
+@media (max-width: 986px) {
+    .playlist {
+        margin-bottom: 30px;
+        top: 70%;
+    }
+    .player {
+        left: 47%;
+        margin: 0 -150px;
+    }
+
+    .playlist {
+        left: 50%;
+        margin: 0 -225px;
+    }
+}
+
+@media (max-width: 528px) {
+    .playlist {
+        width: 300px;
+    }
+    .playlist {
+        left: 60%;
+    }
+    .player {
+        left: 40%;
+    }
+}
