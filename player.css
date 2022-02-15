@@ -1,12 +1,21 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #222;
+}
+
 .player {
-    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
     color: #fff;
     padding: 40px;
     width: 300px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 30%;
 }
 
 .player img {
@@ -37,4 +46,42 @@
 
 #pause {
     display: none;
+}
+
+.playlist {
+    color: #fff;
+    position: absolute;
+    border: 1px solid #20ff03;
+    top: 10%;
+    left: 60%;
+    width: 450px;
+    padding: 10px;
+    background-color: #222;
+}
+
+.playlist ul {
+    width: 100%;
+    padding: 0;
+}
+
+.playlist ul li {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 20px;
+    list-style: none;
+    background-color: #222;
+    cursor: pointer;
+}
+
+.playlist li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.playlist li:hover {
+    border: 1px solid #20ff03;
+}
+.playlist h2 {
+    text-align: center;
 }

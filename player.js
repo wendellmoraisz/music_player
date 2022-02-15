@@ -76,3 +76,14 @@ function progress() {
 }
 
 window.setInterval(progress, 1)
+
+const playlist = document.querySelector('.playlist > ul')
+musicas.forEach(e => playlist.innerHTML += `<li><a href="#">${e.titulo} - ${e.artista}</a></li>`)
+
+const musicsFromPlaylist = document.querySelectorAll('.playlist > ul > li')
+
+musicsFromPlaylist.forEach((e,i) => {
+    e.onclick = function(){
+        passarMusica(musicas[i])
+}
+})
